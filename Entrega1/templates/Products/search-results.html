@@ -1,0 +1,11 @@
+<p>Encontré los siguientes: </p>>
+
+% if products %
+
+<ul>
+{% for producto in products %}
+    <li> {{producto.name}} </li>
+{% endfor %}
+</ul>
+
+{% endif %}

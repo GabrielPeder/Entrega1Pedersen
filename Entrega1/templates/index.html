@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+<head>
+{% block titulo %}
+Inicio
+</head>
+
+  {% block content %}
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="https://storage.googleapis.com/diariodemocracia/cache/65/c5/motosnaldo1-e475c9.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item ">
+          <img class="d-block w-100" src="https://fotos.perfil.com/2020/11/11/trim/950/534/boom-de-venta-de-motos-mucha-gente-opto-por-este-medio-ante-el-contagio-potencial-que-puede-haber-en-un-servicio-publico-1075124.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item ">
+          <img class="d-block w-100" src="https://lamoto.com.ar/wp-content/uploads/2019/10/Concesionario-motos.jpg" alt="Third slide">
+        </div>
+      </div>
+    </div>
+    
+    <h1>Bienvenido a nuestra Web!</h1>
+    <p></p>
+    <h2>Acá vas a poder encontrar todos nuestros modelos:</h2>
+
+
+    <form action="Products/list_products" method="GET">
+
+        <input type="text" name="search" id="search">
+
+        <input type="submit" value="Buscar">
+
+
+
+
+    </form>
+  {% endblock %}
+
+{% endblock %}
+
+<!-- <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Diseño
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+            Este es el texto del diseño de la moto
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Precio
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <h1>modelo a</h1>
+        <h2>Precio contado: </h2>
+        <h2>Precio con crédito </h2>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Ficha Técnica
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <button type="button" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
+<path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path>
+</svg>
+          Ficha Técnica - {modelo}
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->
