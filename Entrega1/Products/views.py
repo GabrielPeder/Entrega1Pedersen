@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from Products.models import Product
 from Products.forms import ProductForm
+from Categories.models import Category
 
 def inicio(request):
 
@@ -43,8 +44,12 @@ def list_products(request):
         products = Product.objects.filter(name__icontains=search)
     else:
         products = Product.objects.all()
+        
+    categories = Category.objects.all()
     context = {
+        'cant' : categories.count(),
         'products':products,
+        'categories' : categories,
     }
     return render(request, 'Products/list_products.html', context=context)
 

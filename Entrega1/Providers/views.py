@@ -17,7 +17,7 @@ class ProvidersListView(ListView):
     queryset = Provider.objects.filter(is_active = True)
 
 
-
+# Create anda
 def providers_create(request):
     if request.method == 'GET':
         context = {
@@ -44,13 +44,13 @@ def providers_create(request):
                 'form_errors': form.errors,
                 'form': ProviderForm()
             }
-        return render(request, '/Providers/provider_add.html', context=context)
+        return render(request, 'Providers/provider_add.html', context=context)
 
-# class ProviderCreateView(CreateView):
-#     model = Provider
-#     template_name = 'Providers/provider_add.html'
-#     fields = '__all__'
-#     success_url = 'Providers/providers_list/'
+class ProviderCreateView(CreateView):
+    model = Provider
+    template_name = 'Providers/provider_add.html'
+    fields = '__all__'
+    success_url = 'Providers/providers_list/'
 
 
 def provider_update(request, pk):
@@ -74,11 +74,11 @@ def provider_update(request, pk):
     elif request.method == 'POST':
         form = ProviderForm(request.POST)
         if form.is_valid():
-            provider.name = form.cleaned_data['name'],
-            provider.address = form.cleaned_data['address'],
-            provider.phone_number = form.cleaned_data['phone_number'],
-            provider.email = form.cleaned_data['email'],
-            provider.condition = form.cleaned_data['condition'],
+            provider.name = form.cleaned_data['name']
+            provider.address = form.cleaned_data['address']
+            provider.phone_number = form.cleaned_data['phone_number']
+            provider.email = form.cleaned_data['email']
+            provider.condition = form.cleaned_data['condition']
             provider.save()
             
             context = {
