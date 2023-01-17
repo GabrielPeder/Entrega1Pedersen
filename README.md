@@ -1,4 +1,6 @@
 # Entrega1Pedersen
 
-Entrega con errores a corregir. La página no tiene complejidad. Hay que agregar Categorias, y modelos. 
-También hay que agregar Proveedores pero no funciona. 
+Web de venta de motos. Se pueden ver los modelos, las marcas y los proveedores existentes, y añadir nuevos. 
+Tiene funcionalidad de búsqueda por nombre de modelo.
+
+Otras funcionalidades se irán agregando próximamente.
